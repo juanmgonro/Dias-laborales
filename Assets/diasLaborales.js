@@ -5,7 +5,7 @@
  * @returns numero de dias por mes
  */
 const comprobacionDias = (anioComprobacion, mesComprobacion) => {
-    let numeroDias = 0;
+    let numeroDias = 1;
     switch (mesComprobacion) {
         case 0: numeroDias = 31; break;
         case 1: anioComprobacion % 4 == 0 ? numeroDias = 29 : numeroDias = 28; break;
@@ -27,13 +27,13 @@ const comprobacionDias = (anioComprobacion, mesComprobacion) => {
  * @returns numero de dia de la semana
  */
 const obtenerDia = () => {
-    let anio = parseInt(document.getElementById("anio").value);
-    let mes = parseInt(document.getElementById("meses").value);
-    let numeroDiasMes = comprobacionDias(anio, mes);
+    const anio = parseInt(document.getElementById("anio").value);
+    const mes = parseInt(document.getElementById("meses").value);
+    const numeroDiasMes = comprobacionDias(anio, mes);
     document.getElementById("dia").setAttribute("max", numeroDiasMes);
-    let dia = document.getElementById("dia").value;
+    const dia = parseInt(document.getElementById("dia").value);
     if(dia<=numeroDiasMes){
-        let obtencionFecha = new Date(anio, mes, dia);
+        const obtencionFecha = new Date(anio, mes, dia);
         return numDiaSemana = obtencionFecha.getDay();
     }
     else {
