@@ -1,0 +1,39 @@
+div{
+    background-color: rgb(179, 116, 22);
+    min-height: 50px;
+    height: auto;
+}
+
+#headH1{
+height: 50px;
+color:rgb(70, 43, 2);
+background-color: #1B8C4C;
+height: auto;
+}
+
+#fecha{
+    color:rgb(53, 32, 0);
+}
+ p{
+    height: 45px;
+    color:rgb(255, 255, 255);
+    background-color: #1B8C4C;
+    border-radius: 5px;
+    padding-top:5px;
+    padding: 5px 0 0 20px;
+ }
+
+
+input{
+    min-width: 200px;
+    padding: 3px;
+    margin: 5px auto;
+    background-color: black;
+    border: 1px solid white;
+    text-align: center;
+}
+
+label
+{
+    color:blanchedalmond;
+}

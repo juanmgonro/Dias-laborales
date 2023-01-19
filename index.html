@@ -14,40 +14,46 @@
 </head>
 
 <body>
-    <header>
-        <h1>Calculadora de dias laborales</h1>
+    <header class="container" >
+        <div class="row" >
+            <div class="col-12 text-center" id="headH1"><h2 >Cálculo de dias laborales y semanales</h2></div>
+        </div>
     </header>
     <form class="container" name="formCalcularFechas" onsubmit="return false">
-        <h2>Fecha </h2>
-        <div class="row">
-            <div class="col align-self-start">
-                <label for="dia">Dia</label>
-                <input id="dia" type="number" placeholder="1" min="1" max="31" required>
+        <div class="row align-items-center justify-content-center">
+            <h2 id ="fecha" class="col-12 col-md-5 col-lg-2">Fecha </h2>
+            <div class="col-10 col-md-5 col-lg-3">
+                <label for="dia" class="fs-5"><strong>Dia</strong></label>
+                <input class="form-control" id="dia" type="number" placeholder="1" min="1" max="31" required>
             </div>
-            <div class="col align-self-center">
-                <select name="meses" id="meses">
-                    <option value="ene">Enero</option>
-                    <option value="feb">Febrero</option>
-                    <option value="mar">Marzo</option>
-                    <option value="abr">Abril</option>
-                    <option value="may">Mayo</option>
-                    <option value="jun">Junio</option>
-                    <option value="jul">Julio</option>
-                    <option value="ago">Agosto</option>
-                    <option value="sep">Septiembre</option>
-                    <option value="oct">Octubre</option>
-                    <option value="nov">Noviembre</option>
-                    <option value="dic">Diciembre</option>
+            <div class="col-10 col-md-5 col-lg-3 align-items-center">
+                <label for="mes" class="fs-5"><strong>Mes</strong></label>
+                <select name="mes" id="meses" class="form-select">
+                    <option value="0">Enero</option>
+                    <option value="1">Febrero</option>
+                    <option value="2">Marzo</option>
+                    <option value="3">Abril</option>
+                    <option value="4">Mayo</option>
+                    <option value="5">Junio</option>
+                    <option value="6">Julio</option>
+                    <option value="7">Agosto</option>
+                    <option value="8">Septiembre</option>
+                    <option value="9">Octubre</option>
+                    <option value="10">Noviembre</option>
+                    <option value="11">Diciembre</option>
                 </select>
             </div>
-            <div class="col align-self-end">
-                <label for="anio">Año</label>
-                <input id="anio" type="number" required>
+            <div class="col-10 col-md-5 col-lg-4">
+                <label for="anio" class="fs-5"><strong>Año</strong></label>
+                <input id="anio" type="number" required class="form-control">
             </div>
         </div>
-        <div class="row">
-            <div class="col"><button type="submit" id="calcular" onclick="calculaFecha()">Calcular</button></div>
-            <div class="col"><p id="diaLaboral">Holaaa</p></div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 "><button type="submit" id="calcular" 
+                class="btn btn-success btn-lg" onclick="calculaFechaLaboral()">Calcular</button></div>
+            <div class="col-10 col-md-5 ">
+                <p id="diaLaboral" class="fs-6">Dia?, Laboral?</p>
+            </div>
         </div>
     </form>
 
